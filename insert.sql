@@ -43,7 +43,46 @@ SELECT
 	student_year,
 	score
 FROM
-	student_mst;
+	student_mst
+WHERE
+	`name` LIKE '%수%'  /* 앞뒤로 머가오든 출력*/
+	AND `name` not LIKE '%수';/* %문자 = 문자앞에 머가 오든 출력*/
+
+	
+SELECT
+	id,
+	`name`,
+	student_year,
+	score
+FROM
+	student_mst
+WHERE
+	student_year not IN(1, 2);  /*not 키워드 옆에 씀, in 포함하는 것 출력*/
+	
+
+SELECT
+	id,
+	`name`,
+	student_year,
+	score
+FROM
+	student_mst
+WHERE 
+	score not BETWEEN 80 AND 90; /* 사이에 있는 값들을 뽑아온다.*/ 
+	
+
+SELECT
+	id,
+	`name`,
+	student_year,
+	score
+FROM
+	student_mst
+WHERE 
+	`name` IS not NULL; /*IS NULL null값인것만 출력, IS NULL 일떄 not 은 사이에 적어야한다.*/
+	
+	
+
 	
 
 
