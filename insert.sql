@@ -80,6 +80,7 @@ FROM
 	student_mst
 WHERE 
 	`name` IS not NULL; /*IS NULL null값인것만 출력, IS NULL 일떄 not 은 사이에 적어야한다.*/
+	/*test*/
 	
 	
 
