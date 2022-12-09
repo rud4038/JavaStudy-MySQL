@@ -36,6 +36,7 @@ VALUE
 (0, '박준현', 2, 85),
 (0, '이승아', 3, 90),
 (0, '김수현', 1, 75);
+/*----------------------------------------*/
 
 SELECT
 	id,
@@ -80,8 +81,35 @@ FROM
 	student_mst
 WHERE 
 	`name` IS not NULL; /*IS NULL null값인것만 출력, IS NULL 일떄 not 은 사이에 적어야한다.*/
-	/*test*/
 	
+/* ------------------------------*/	
+UPDATE 
+	student_mst 
+SET
+	score = 80 
+WHERE
+	`name` = '박준현';
+
+
+/*
+	2학년 중에 성적이 80~90 사이인 학생들의 점수를 100으로 바꿔라
+*/
+UPDATE 
+	student_mst 
+SET 
+	score = 100 
+WHERE
+	student_year = 2 
+	AND score BETWEEN 80 AND 90;
+	
+	
+/*-------------------------------*/
+
+DELETE 
+FROM 
+	student_mst
+WHERE
+	score < 80;
 	
 
 	
