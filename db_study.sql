@@ -161,11 +161,10 @@ CREATE TABLE IF NOT EXISTS `user_dtl` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- 테이블 데이터 db_study.user_dtl:~4 rows (대략적) 내보내기
+-- 테이블 데이터 db_study.user_dtl:~3 rows (대략적) 내보내기
 DELETE FROM `user_dtl`;
 INSERT INTO `user_dtl` (`id`, `phone`, `address`, `create_date`, `update_date`) VALUES
 	(1, NULL, NULL, '2022-12-09 10:43:43', '2022-12-09 10:43:43'),
-	(2, NULL, NULL, '2022-12-09 10:43:43', '2022-12-09 10:43:43'),
 	(3, NULL, NULL, '2022-12-09 10:43:43', '2022-12-09 10:43:43'),
 	(4, NULL, NULL, '2022-12-09 10:43:43', '2022-12-09 10:43:43');
 
