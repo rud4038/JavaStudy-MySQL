@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `subquery_study` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `subquery_study`;
 -- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: subquery_study
@@ -45,6 +43,31 @@ INSERT INTO `board_mst` VALUES (1,'제목1','게시글 내용1',0,1),(2,'제목2
 UNLOCK TABLES;
 
 --
+-- Table structure for table `score_mst`
+--
+
+DROP TABLE IF EXISTS `score_mst`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `score_mst` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `score` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `score_mst`
+--
+
+LOCK TABLES `score_mst` WRITE;
+/*!40000 ALTER TABLE `score_mst` DISABLE KEYS */;
+INSERT INTO `score_mst` VALUES (1,'신경수',100),(2,'고희주',95),(3,'장건녕',85),(4,'문승주',80),(5,'이승아',75),(6,'김수현',65),(7,'문경원',50);
+/*!40000 ALTER TABLE `score_mst` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `user_dtl`
 --
 
@@ -66,7 +89,7 @@ CREATE TABLE `user_dtl` (
 
 LOCK TABLES `user_dtl` WRITE;
 /*!40000 ALTER TABLE `user_dtl` DISABLE KEYS */;
-INSERT INTO `user_dtl` VALUES (1,NULL,NULL,NULL),(2,NULL,NULL,NULL);
+INSERT INTO `user_dtl` VALUES (1,'김준일','aaa@naver.com','01044445555'),(2,'김준이','bbb@naver.com','01033332222'),(3,NULL,NULL,NULL),(4,NULL,NULL,NULL),(5,NULL,NULL,NULL),(6,NULL,NULL,NULL),(7,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `user_dtl` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -81,7 +104,7 @@ CREATE TABLE `user_mst` (
   `id` int NOT NULL AUTO_INCREMENT,
   `username` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -90,7 +113,7 @@ CREATE TABLE `user_mst` (
 
 LOCK TABLES `user_mst` WRITE;
 /*!40000 ALTER TABLE `user_mst` DISABLE KEYS */;
-INSERT INTO `user_mst` VALUES (1,'test'),(2,'test2');
+INSERT INTO `user_mst` VALUES (1,'test'),(2,'test2'),(3,'aaa'),(4,'bbb'),(5,'ccc'),(6,'ddd'),(7,'eee');
 /*!40000 ALTER TABLE `user_mst` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -150,4 +173,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-13 12:53:53
+-- Dump completed on 2022-12-14 12:16:24
